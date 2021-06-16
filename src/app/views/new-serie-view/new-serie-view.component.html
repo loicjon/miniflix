@@ -1,0 +1,108 @@
+<app-header></app-header>
+
+<div class="test1">
+    <form class="container text-center" (ngSubmit)="onSubmitNewSerie()" #newSerie="ngForm">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Serie Name</label>
+
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                    <div *ngIf="name.errors.required">
+                        the name is required
+                    </div>
+                </div>
+
+                <input type="text" class="form-control" name="name" id="name" [(ngModel)]="serie.name" required #name="ngModel">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="releasedAt">Season release date</label>
+
+                <div *ngIf="releasedAt.invalid && (releasedAt.dirty || releasedAt.touched)" class="alert alert-danger">
+                    <div *ngIf="releasedAt.errors.required">
+                        the season release date is required
+                    </div>
+                </div>
+
+
+                <input type="text" class="form-control" name="releasedAt" id="releasedAt" [(ngModel)]="serie.releasedAt" required
+                    #releasedAt="ngModel">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="seasonNumber">Season Number</label>
+
+            <div *ngIf="seasonNumber.invalid && (seasonNumber.dirty || seasonNumber.touched)"
+                class="alert alert-danger">
+                <div *ngIf="seasonNumber.errors.required">
+                    the season number is required
+                </div>
+            </div>
+
+
+            <input type="number" class="form-control" name="seasonNumber" id="seasonNumber" [(ngModel)]="serie.seasonNumber" required
+                #seasonNumber="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+
+            <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+                <div *ngIf="description.errors.required">
+                    the description is required
+                </div>
+            </div>
+
+
+            <textarea class="form-control" name="description" id="description" rows="3" [(ngModel)]="serie.description" required
+                #description="ngModel"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="critic">Critic</label>
+
+            <div *ngIf="critic.invalid && (critic.dirty || critic.touched)" class="alert alert-danger">
+                <div *ngIf="critic.errors.required">
+                    the critic is required
+                </div>
+            </div>
+
+
+            <textarea class="form-control" name="critic" id="critic" rows="3" [(ngModel)]="serie.critic" required
+                #critic="ngModel"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="picture">Picture</label>
+
+            <div *ngIf="picture.invalid && (picture.dirty || picture.touched)" class="alert alert-danger">
+                <div *ngIf="picture.errors.required">
+                    the season number is required
+                </div>
+            </div>
+
+
+            <input type="text" class="form-control" name="picture" id="picture" [(ngModel)]="serie.picture" required #picture="ngModel">
+        </div>
+
+
+        <div class="form-group">
+            <label for="comment">Comments</label>
+
+            <div *ngIf="comment.invalid && (comment.dirty || comment.touched)" class="alert alert-danger">
+                <div *ngIf="comment.errors.required">
+                    the comment is required
+                </div>
+            </div>
+
+
+            <textarea class="form-control" name="comment" id="comment" rows="3" [(ngModel)]="serie.comment" required
+                #comment="ngModel"></textarea>
+        </div>
+        <button class="btn btn-primary" [disabled]="newSerie.invalid">Add</button>
+
+        <div class="form-group">
+            <a routerLink="/series" class="btn btn-dark float-left"> Back
+            </a>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<div id="app">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="https://cloudinary-res.cloudinary.com/image/upload/v1521663307/MiniFlix-Logo_620x180.png"
+                        alt="Netflix" width="112" height="28">
+                </a>
+                
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <a
+                    *ngIf="isAuth"
+                    class="btn btn-outline-danger"
+                    routerLink="/serie/new">Add serie
+                    </a>
+                    
+                    <button 
+                    *ngIf="isAuth"
+                    type="button" class="btn btn-outline-primary"
+                    (click)="onClickSignOut()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

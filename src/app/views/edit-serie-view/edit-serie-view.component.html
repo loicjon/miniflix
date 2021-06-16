@@ -1,0 +1,73 @@
+<app-header></app-header>
+
+<div class="test1">
+
+    <div class="container mt-5">
+    
+       
+    
+        <div class="container text-center mt-3">
+    
+            <form [formGroup]="editSerieForm" (ngSubmit)="onSubmitEditSerie()">
+    
+                <div class="form-group">
+                    <label for="name">
+                        Serie Name
+                    </label>
+                    <input type="text" id="name" class="form-control" formControlName="name">
+                </div>
+    
+                <div class="form-group">
+                    <label for="releasedAt">
+                        Season release date
+                    </label>
+                    <input type="text" id="releasedAt" class="form-control" formControlName="releasedAt">
+                </div>
+    
+                <div class="form-group">
+                    <label for="seasonNumber">
+                        Season Number
+                    </label>
+                    <input type="number" id="seasonNumber" class="form-control" formControlName="seasonNumber">
+                </div>
+    
+                <div class="form-group">
+                    <label for="description">
+                        Description
+                    </label>
+                    <input type="text" id="description" class="form-control" formControlName="description">
+                </div>
+    
+                <div class="form-group">
+                    <label for="critic">
+                        Critic
+                    </label>
+                    <input type="text" id="critic" class="form-control" formControlName="critic">
+                </div>
+    
+                <div class="form-group">
+                    <label for="picture">
+                        Picture
+                    </label>
+                    <input type="text" id="picture" class="form-control" formControlName="picture">
+                </div>
+    
+                <div class="form-group">
+                    <label for="comment">
+                        Comments
+                    </label>
+                    <input type="text" id="comment" class="form-control" formControlName="comment">
+                </div>
+    
+                <button class="btn btn-primary" type="submit" [disabled]="editSerieForm.invalid">Eddit !</button>
+    
+                <br>
+    
+                <a routerLink="/series" class="card-link">Back to list</a>
+            </form>
+    
+        </div>
+    
+    
+    </div>
+</div>

@@ -1,0 +1,41 @@
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #e5e5e5;
+    background-color: #000;
+    padding-top: 30px;
+}
+
+.navbar {
+    background-color: black;
+    z-index: 2;
+    padding: 30px 0;
+}
+
+.navbar-item {
+    height: 25px;
+    width: auto;
+}
+
+.btn-outline-danger {
+    margin-left: 25px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.9rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.btn-outline-primary {
+    margin-right: 18px;
+}
+
+.btn-outline-danger {
+    margin-right: 24px;
+}

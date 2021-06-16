@@ -1,0 +1,47 @@
+<div class="test">
+<div class="container mt-5">
+
+    <app-header></app-header>
+    
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Date</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let serie of series">
+                <th scope="row">{{serie.id}}</th>
+                <td>{{serie.name}}</td>
+                <td>{{serie.releasedAt}}</td>
+                <td>
+                    <button 
+                    class="btn btn-primary m-2" 
+                    (click)="onClickShowSerie(serie.id)"
+                   >
+                        Detail
+                    </button>
+                    <button 
+                    class="btn btn-secondary m-2" 
+                    (click)="onClickEditSerie(serie.id)">
+                        Edit
+                    </button>
+                    <button 
+                    class="btn btn-danger m-2" 
+                    (click)="onClickDeleteSerie(serie.id)">
+                        Delete
+                    </button>
+                    <button 
+                    class="btn btn-success m-2" 
+                    (click)="onClickShowComment(serie.id)">
+                        Comment
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
