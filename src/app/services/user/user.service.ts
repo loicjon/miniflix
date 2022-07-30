@@ -12,7 +12,7 @@ export class UserService {
  */
   constructor() { 
     this.user = new User(
-      'Administrateur',
+      'admin',
        'azerty');
    }
 
